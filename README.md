@@ -1,184 +1,137 @@
-# Conversational RAG with PDF Uploads and Chat History
 
-This Streamlit application allows users to upload PDF documents and engage in a conversational question-answering session based on the content of the uploaded PDFs. It leverages Retrieval Augmented Generation (RAG) and maintains chat history for context-aware responses.
+---
 
-## Features
+# 📚 Conversational RAG with PDF Uploads and Chat History
 
-- **PDF Uploads**: Upload multiple PDF files to the application.
-- **Conversational Interface**: Ask questions related to the uploaded PDFs and receive answers based on their content.
-- **Chat History**: The application maintains chat history to provide context-aware answers.
-- **Session Management**: Support for multiple sessions with customizable session IDs.
-- **Language Model Integration**: Utilizes the Groq API with the `Gemma2-9b-It` model for generating responses.
-- **Embeddings**: Uses HuggingFace embeddings (`all-MiniLM-L6-v2`) for document vectorization.
+An advanced conversational assistant built using **Streamlit** and **LangChain**, designed to handle your PDF uploads and answer questions intelligently. This app leverages **Retrieval Augmented Generation (RAG)** and supports contextual, session-aware conversations with chat history.
 
-## Prerequisites
+## ✨ Key Features
+- **📄 PDF Uploads**: Effortlessly upload one or multiple PDF documents for analysis.
+- **💬 Conversational Interface**: Engage in natural language conversations, asking questions directly based on your uploaded PDFs.
+- **🕒 Context-Aware Responses**: Maintains chat history across sessions for better context and accuracy.
+- **🔑 Session Management**: Organize conversations with unique session IDs for independent histories.
+- **🚀 Advanced Language Model**: Powered by **Groq's Gemma2-9b-It** model for state-of-the-art response generation.
+- **📊 HuggingFace Embeddings**: Uses `all-MiniLM-L6-v2` for efficient and accurate document vectorization.
 
-- Python 3.7 or higher
-- [Streamlit](https://streamlit.io/)
-- [LangChain](https://github.com/hwchase17/langchain)
-- Groq API Key
-- HuggingFace API Token
+---
 
-## Installation
+## 🎯 Prerequisites
+- **Python**: Version 3.7 or higher.
+- **Groq API Key**: To access the language model.
+- **HuggingFace API Token**: For embeddings.
 
-1. **Clone the repository**:
+---
 
-   ```bash
-   git clone https://github.com/0Xuser100/Conversational-RAG-With-PDF-uplaods-and-chat-history.git
-   cd your-repo-name
-   ```
+## ⚙️ Installation
 
-2. **Create a virtual environment**:
+### 1. Clone the Repository
+```bash
+git clone https://github.com/0Xuser100/Conversational-RAG-With-PDF-uplaods-and-chat-history.git
+cd Conversational-RAG-With-PDF-uplaods-and-chat-history
+```
 
-   ```bash
-   python -m venv venv
-   ```
+### 2. Create a Virtual Environment
+```bash
+python -m venv venv
+```
 
-3. **Activate the virtual environment**:
+### 3. Activate the Virtual Environment
+- **Windows**:
+  ```bash
+  venv\Scripts\activate
+  ```
+- **macOS/Linux**:
+  ```bash
+  source venv/bin/activate
+  ```
 
-   - On Windows:
+### 4. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-     ```bash
-     venv\Scripts\activate
-     ```
+### 5. Set Up Environment Variables
+- Create a `.env` file in the project root.
+- Add your API keys:
+  ```plaintext
+  HF_TOKEN=your_huggingface_api_token
+  ```
 
-   - On macOS/Linux:
+---
 
-     ```bash
-     source venv/bin/activate
-     ```
+## 🚀 How to Use
 
-4. **Install dependencies**:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-5. **Set up environment variables**:
-
-   - Create a 
-
-.env
-
- file in the project root directory.
-   - Add your HuggingFace API token to the 
-
-.env
-
- file:
-
-     ```env
-     HF_TOKEN=your_huggingface_api_token
-     ```
-
-## Usage
-
-1. **Run the Streamlit application**:
-
+1. **Run the Application**
    ```bash
    streamlit run app.py
    ```
 
-2. **Enter your Groq API Key**:
+2. **Enter Your API Keys**
+   - When prompted, provide your Groq API key.
 
-   - Upon launching the app, you'll be prompted to enter your Groq API key. This key is required to access the language model.
+3. **Upload PDFs**
+   - Use the app interface to upload one or more PDF files.
 
-3. **Upload PDF files**:
+4. **Start Conversing**
+   - Ask questions about your uploaded content.
+   - Enjoy contextual and accurate responses.
 
-   - Use the file uploader in the app to select one or more PDF files. The application supports multiple file uploads.
+---
 
-4. **Interact with the chatbot**:
+## 🗂️ Project Structure
+```
+Conversational-RAG-With-PDF-uplaods-and-chat-history/
+├── app.py             # Main application script
+├── requirements.txt   # Required dependencies
+├── .env.example       # Template for environment variables
+├── README.md          # Project documentation
+└── resources/         # Placeholder for additional resources
+```
 
-   - Enter a session ID or use the default `default_session`.
-   - Ask questions about the content of the uploaded PDFs.
-   - The chatbot will provide answers based on the documents and maintain context using chat history.
+---
 
-## File Overview
+## 📋 Dependencies
 
-- 
+### Key Python Packages
+- `streamlit`
+- `langchain`
+- `langchain_groq`
+- `langchain_huggingface`
+- `dotenv`
+- `duckduckgo-search`
 
-app.py
+Ensure all required packages are included in `requirements.txt`.
 
-: Main application file containing the Streamlit app code.
-- 
+---
 
-.env
+## 🧪 Example Workflow
+1. **User**: "Upload multiple PDFs containing AI-related research papers."
+2. **App**: Uploads the PDFs and analyzes their content.
+3. **User**: "What are the key differences between supervised and unsupervised learning?"
+4. **App**: Provides a concise, context-aware response based on the uploaded content.
 
-: Environment file where you store your HuggingFace API token.
-- 
+---
 
-requirements.txt
+## 🤝 Contributing
+We welcome contributions! Here's how you can help:
+- Fork the repository.
+- Create a feature branch.
+- Submit a pull request with your changes.
 
-: Dependencies required to run the application.
+---
 
-## Dependencies
+## 📜 License
+This project is licensed under the **MIT License**.
 
-- 
+---
 
-streamlit
+## 📞 Contact
+For questions, suggestions, or feedback:
+- **Name**: Mahmoud Abdelhamid
+- **Email**: [mahmoudabdulhamid22@gmail.com](mailto:mahmoudabdulhamid22@gmail.com)
+- **GitHub**: [https://github.com/0Xuser100](https://github.com/0Xuser100)
+- **LinkedIn**: [https://www.linkedin.com/in/mahmoud-abdulhamid-052244230/](https://www.linkedin.com/in/mahmoud-abdulhamid-052244230/)
 
+---
 
-- 
-
-langchain
-
-
-- 
-
-langchain_chroma
-
-
-- 
-
-langchain_core
-
-
-- 
-
-langchain_community
-
-
-- 
-
-langchain_groq
-
-
-- 
-
-langchain_huggingface
-
-
-- 
-
-langchain_text_splitters
-
-
-- 
-
-dotenv
-
-
-
-*Note: Ensure all dependencies are listed in the 
-
-requirements.txt
-
- file.*
-
-## Additional Information
-
-- **Embeddings Model**: The application uses HuggingFace's `all-MiniLM-L6-v2` model for generating embeddings.
-- **Language Model**: Utilizes the `Gemma2-9b-It` model via the Groq API for conversational responses.
-- **Session Management**: Sessions are managed using 
-
-session_id
-
-, allowing for multiple, independent chat histories.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request if you have suggestions or improvements.
-
-## License
-
-This project is licensed under the MIT License.
+With this chatbot, you're just a conversation away from unlocking the insights hidden in your documents. 🚀
